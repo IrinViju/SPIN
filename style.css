@@ -149,34 +149,40 @@ button:hover {
 .slice-label {
   position: absolute;
   top: 50%;
-  left: 50%;
+  left: 48%;
   font-weight: 600;
-  font-size: 14px;
+  font-size: 12px;
   color: #333;
   pointer-events: none;
 }
 
+
 /* Position each label in the center of its slice */
-.slice-label:nth-child(1) { /* Loops - 0-60deg, center at 30deg */
+.slice-label:nth-child(1) {
   transform: rotate(30deg) translateY(-100px) rotate(-30deg);
 }
 
-.slice-label:nth-child(2) { /* Strings - 60-120deg, center at 90deg */
+
+.slice-label:nth-child(2) {
   transform: rotate(90deg) translateY(-100px) rotate(-90deg);
 }
 
-.slice-label:nth-child(3) { /* Functions - 120-180deg, center at 150deg */
+
+.slice-label:nth-child(3) {
   transform: rotate(150deg) translateY(-100px) rotate(-150deg);
 }
 
-.slice-label:nth-child(4) { /* Variables - 180-240deg, center at 210deg */
+
+.slice-label:nth-child(4) {
   transform: rotate(210deg) translateY(-100px) rotate(-210deg);
 }
 
-.slice-label:nth-child(5) { /* Conditions - 240-300deg, center at 270deg */
+
+.slice-label:nth-child(5) {
   transform: rotate(270deg) translateY(-100px) rotate(-270deg);
 }
 
-.slice-label:nth-child(6) { /* Arrays - 300-360deg, center at 330deg */
+
+.slice-label:nth-child(6) {
   transform: rotate(330deg) translateY(-100px) rotate(-330deg);
 }
