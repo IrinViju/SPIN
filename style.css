@@ -1,0 +1,182 @@
+/* Google Fonts should be added in HTML head */
+/* Poppins + Fira Code */
+
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  background-color: #FCF1DD; /* Pastel Champagne */
+  font-family: 'Poppins', sans-serif;
+  text-align: center;
+  padding: 40px;
+  color: #333;
+}
+
+/* Screens */
+.screen {
+  margin-top: 40px;
+}
+
+/* Hidden class for page switching */
+.hidden {
+  display: none;
+}
+
+/* Headings */
+h1, h2 {
+  color: #97E5D7; /* Caroline Teal */
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+/* Question text */
+#question-text {
+  font-family: 'Fira Code', monospace;
+  font-size: 18px;
+  margin: 20px 0;
+  color: #444;
+}
+
+/* Input */
+input {
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 2px solid #D2EBD8;
+  background-color: white;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Buttons */
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  border-radius: 25px;
+  border: none;
+  background-color: #97E5D7; /* Teal */
+  color: #333;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Button hover */
+button:hover {
+  background-color: #FEB7B3; /* Soft Pink */
+  transform: scale(1.05);
+}
+
+
+/* Timer */
+.timer {
+  margin-top: 20px;
+  font-weight: 600;
+  color: #97E5D7;
+}
+
+/* Progress bar container */
+.progress-bar {
+  width: 60%;
+  height: 10px;
+  background-color: #D2EBD8;
+  border-radius: 10px;
+  margin: 20px auto;
+  overflow: hidden;
+}
+
+/* Progress fill */
+.progress {
+  height: 100%;
+  width: 0%;
+  background-color: #FEB7B3;
+  transition: width 0.5s ease;
+}
+
+/* Result text */
+#accuracy,
+#average-time,
+#speed-rating {
+  margin: 10px 0;
+  font-weight: 600;
+  color: #555;
+}
+
+/* ================= REAL ROTATING WHEEL ================= */
+
+.wheel-container {
+  position: relative;
+  width: 320px;
+  height: 320px;
+  margin: 40px auto;
+}
+
+.wheel {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 5px solid #97E5D7;
+
+  background: conic-gradient(
+    #97E5D7 0deg 60deg,
+    #FEB7B3 60deg 120deg,
+    #97E5D7 120deg 180deg,
+    #FEB7B3 180deg 240deg,
+    #97E5D7 240deg 300deg,
+    #FEB7B3 300deg 360deg
+  );
+
+  transition: transform 4s cubic-bezier(0.33, 1, 0.68, 1);
+}
+
+.pointer {
+  width: 0;
+  height: 0;
+  border-left: 15px solid transparent;
+  border-right: 15px solid transparent;
+  border-bottom: 25px solid #333;
+  position: absolute;
+  top: -25px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+/* ================= PERFECT SLICE LABELS ================= */
+
+/* ================= PERFECT SLICE LABELS ================= */
+.slice-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-weight: 600;
+  font-size: 14px;
+  color: #333;
+  pointer-events: none;
+}
+
+/* Position each label in the center of its slice */
+.slice-label:nth-child(1) { /* Loops - 0-60deg, center at 30deg */
+  transform: rotate(30deg) translateY(-100px) rotate(-30deg);
+}
+
+.slice-label:nth-child(2) { /* Strings - 60-120deg, center at 90deg */
+  transform: rotate(90deg) translateY(-100px) rotate(-90deg);
+}
+
+.slice-label:nth-child(3) { /* Functions - 120-180deg, center at 150deg */
+  transform: rotate(150deg) translateY(-100px) rotate(-150deg);
+}
+
+.slice-label:nth-child(4) { /* Variables - 180-240deg, center at 210deg */
+  transform: rotate(210deg) translateY(-100px) rotate(-210deg);
+}
+
+.slice-label:nth-child(5) { /* Conditions - 240-300deg, center at 270deg */
+  transform: rotate(270deg) translateY(-100px) rotate(-270deg);
+}
+
+.slice-label:nth-child(6) { /* Arrays - 300-360deg, center at 330deg */
+  transform: rotate(330deg) translateY(-100px) rotate(-330deg);
+}

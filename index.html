@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spin & Code</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ================= WELCOME SCREEN ================= -->
+    <div id="welcome-screen" class="screen">
+        <h1>Spin & Code</h1>
+        <input type="text" id="username" placeholder="Enter your name">
+        <button id="start-btn">Start</button>
+    </div>
+
+    <!-- ================= WHEEL SCREEN ================= -->
+    <div id="wheel-screen" class="screen hidden">
+        <h2>Spin the Topic Wheel</h2>
+
+        <div class="wheel-container">
+            <div class="pointer"></div>
+            <div class="wheel" id="wheel">
+                <div class="slice-label" style="--i:0">Arrays</div>
+                <div class="slice-label" style="--i:1">Loops</div>
+                <div class="slice-label" style="--i:2">Strings</div>
+                <div class="slice-label" style="--i:3">Functions</div>
+                <div class="slice-label" style="--i:4">Variables</div>
+                <div class="slice-label" style="--i:5">Conditions</div>
+            </div>
+        </div>
+
+        <button id="spin-btn">SPIN</button>
+        <p id="selected-topic"></p>
+    </div>
+
+    <!-- ================= QUIZ SCREEN ================= -->
+    <div id="quiz-screen" class="screen hidden">
+        <h2 id="topic-heading">Topic Name</h2>
+
+        <div class="timer-container">
+            <div class="timer-circle">
+                <span id="time-left">30</span>
+            </div>
+        </div>
+
+        <p id="question-text">Question will appear here</p>
+
+        <div class="options"></div>
+
+        <div class="progress-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+    </div>
+
+    <!-- ================= RESULT SCREEN ================= -->
+    <div id="result-screen" class="screen hidden">
+        <h2>Results</h2>
+        <p>Accuracy: <span id="accuracy">0%</span></p>
+        <p>Average Time: <span id="avg-time">0s</span></p>
+        <p>Speed Rating: <span id="speed-rating">-</span></p>
+
+        <!-- Leaderboard NOW INSIDE RESULT SCREEN -->
+        <h3>Leaderboard</h3>
+        <ul id="leaderboard"></ul>
+
+        <button id="play-again-btn">Play Again</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
+
+
+
