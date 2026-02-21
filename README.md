@@ -1,78 +1,39 @@
-# 🎉 SPIN — Simple Programming Interactive Navigator
+# 🎯 SPIN – Interactive Coding Quiz Game
 
-A gamified JavaScript learning game that makes coding practice fun and engaging for beginners.  
-Players spin a wheel to get a topic, answer a set of questions, and compete on the leaderboard!
-
----
-
-## 📌 Team Details
-
-### **Team Name:** SPIN Builders  
-### **Team Members:**
-- **Swathi** – Developer / UI & Game Flow  
-- **Irin Viju** – Core Logic & Gameplay  
-- *(Add more members here if applicable)*
+Live Demo 🚀  
+👉 https://lighthearted-twilight-84d1f4.netlify.app/
 
 ---
 
-## 🔗 Hosted Project
+## 📌 About The Project
 
-👉 [Live Demo Link (if deployed)](Add your hosted link here)  
-*(For local play: download repo and open `index.html` in browser)*
+SPIN is an interactive quiz-based coding game built using:
 
----
-
-## 🧠 Problem Statement
-
-Many beginners get bored with traditional coding practice and struggle to stay motivated.  
-SPIN addresses this by turning practice into a **game**, where players:
-
-- Spin a wheel of coding topics
-- Answer questions related to that topic
-- Earn scores and compete on a leaderboard
+- HTML
+- CSS
+- JavaScript
+- Node.js
+- Express
+- Render (Backend Deployment)
+- Netlify (Frontend Deployment)
 
 ---
 
-## 💡 Solution Overview
+## ⚙️ Features
 
-SPIN uses a **wheel spinner** to randomize programming topics, followed by challenge questions to reinforce learning. A local leaderboard encourages competition and replays.
-
----
-
-## 🛠️ Technologies Used
-
-**Frontend:**
-- HTML5  
-- CSS3  
-- JavaScript (Plain JS)  
-- Browser `localStorage` for leaderboard
-
-**Gameplay Logic:**
-- DOM manipulation  
-- Screen switching using CSS classes (`.hidden`)  
-- Wheel animation using CSS transforms  
-- Persistent leaderboard
+- 🎡 Spinning topic selector
+- ⏳ Timer-based quiz
+- 📊 Score tracking
+- 🏆 Leaderboard support
+- 🌐 Fully deployed frontend & backend
 
 ---
 
-## 🚀 Features
+## 🔗 Deployment
 
-✔ Interactive spin wheel for topic selection  
-✔ Multiple screens:  
-   - Name input  
-   - Wheel spin  
-   - Questions  
-   - Summary + Leaderboard  
-✔ Local leaderboard stored in browser  
-✔ Configurable number of questions per round  
-✔ Simple, beginner-friendly UX/UI
+Frontend:  
+https://lighthearted-twilight-84d1f4.netlify.app/
 
----
-
-## 🧩 Installation & Usage
-
-### Clone the repository
-
-```bash
-git clone https://github.com/IrinViju/SPIN.git
+Backend:  
+https://spin-2-z6rm.onrender.com/
 
