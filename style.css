@@ -186,3 +186,11 @@ button:hover {
 .slice-label:nth-child(6) {
   transform: rotate(330deg) translateY(-100px) rotate(-330deg);
 }
+
+.correct {
+  background-color: #97E5D7 !important;
+}
+
+.wrong {
+  background-color: #FEB7B3 !important;
+}
