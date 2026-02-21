@@ -49,4 +49,17 @@ const PORT = process.env.PORT || 5000;
 app.listen(5000, () => {
   console.log("Server running on port 5000");
 });
+const fs = require("fs");
+const path = require("path");
+
+app.get("/scores", (req, res) => {
+  const filePath = path.join(__dirname, "scores.json");
+
+  fs.readFile(filePath, "utf8", (err, data) => {
+    if (err) {
+      return res.status(500).json({ error: "Failed to read scores" });
+    }
+    res.json(JSON.parse(data));
+  });
+});
 
