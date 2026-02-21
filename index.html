@@ -4,6 +4,9 @@
     <meta charset="UTF-8">
     <title>Spin & Code</title>
     <link rel="stylesheet" href="style.css">
+
+    <!-- Optional: Prevent favicon 404 error -->
+    <link rel="icon" href="data:,">
 </head>
 <body>
 
@@ -11,7 +14,7 @@
     <div id="welcome-screen" class="screen">
         <h1>Spin & Code</h1>
         <input type="text" id="username" placeholder="Enter your name">
-        <button id="start-btn">Start</button>
+        <button id="start-btn" type="button">Start</button>
     </div>
 
     <!-- ================= WHEEL SCREEN ================= -->
@@ -30,7 +33,7 @@
             </div>
         </div>
 
-        <button id="spin-btn">SPIN</button>
+        <button id="spin-btn" type="button">SPIN</button>
         <p id="selected-topic"></p>
     </div>
 
@@ -60,16 +63,12 @@
         <p>Average Time: <span id="avg-time">0s</span></p>
         <p>Speed Rating: <span id="speed-rating">-</span></p>
 
-        <!-- Leaderboard NOW INSIDE RESULT SCREEN -->
         <h3>Leaderboard</h3>
         <ul id="leaderboard"></ul>
 
-        <button id="play-again-btn">Play Again</button>
+        <button id="play-again-btn" type="button">Play Again</button>
     </div>
 
     <script src="script.js"></script>
 </body>
 </html>
-
-
-
