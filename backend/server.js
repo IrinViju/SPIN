@@ -1,0 +1,49 @@
+const express = require("express");
+const cors = require("cors");
+const fs = require("fs");
+
+
+const app = express();
+app.use(cors());
+app.use(express.json());
+
+
+const FILE = "scores.json";
+
+
+// ================= SAVE SCORE =================
+app.post("/save-score", (req, res) => {
+  const { name, accuracy, avgTime } = req.body;
+
+
+  const data = JSON.parse(fs.readFileSync(FILE));
+  data.push({
+    name,
+    accuracy,
+    avgTime,
+    date: new Date()
+  });
+
+
+  fs.writeFileSync(FILE, JSON.stringify(data, null, 2));
+
+
+  res.json({ message: "Score saved!" });
+});
+
+
+// ================= GET LEADERBOARD =================
+app.get("/leaderboard", (req, res) => {
+  const data = JSON.parse(fs.readFileSync(FILE));
+
+
+  const sorted = data.sort((a, b) => b.accuracy - a.accuracy);
+
+
+  res.json(sorted.slice(0, 10));
+});
+
+
+app.listen(5000, () => {
+  console.log("Server running on http://localhost:5000");
+});
